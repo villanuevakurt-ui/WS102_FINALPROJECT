@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aningalan Highlands Gallery | Eco-Tourism Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Combined Tailwind Configuration
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#b91c1c',
+                        secondary: '#991b1b',
+                        nature: {
+                            50: '#f1f8f1',
+                            100: '#e0f0e1',
+                            500: '#4a904d',
+                            800: '#1b4d1d',
+                        }
+                    },
+                    borderRadius: {
+                        'large-card': '3.5rem',
+                    },
+                }
+            }
+        }
+
+        // Inline script to prevent theme "flash" (runs immediately)
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Wait for DOM to load before attaching event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('dark');
+
+                    if (document.documentElement.classList.contains('dark')) {
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+        });
+    </script>
+    <style>
+        /* ... existing styles ... */
+        .dark .bg-page {
+            background-color: #0a0505;
+            background-blend-mode: multiply;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/244424726_1858320614347593_1747931822874971348_n.webp);
+        }
+    </style>
+</head>
+
+<body class="bg-page min-h-screen font-sans text-slate-900 dark:text-slate-100">
+
+    <nav class="glass sticky top-0 z-50 transition-all border-b border-primary/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black tracking-tighter text-primary">ANINGALAN ⁂</a>
+            <div class="hidden md:flex items-center space-x-8 font-bold text-xs uppercase tracking-widest">
+                <!-- Navigation Links -->
+                <a href="home.html" class="hover:text-primary transition dark:text-white">Home</a>
+                <a href="about.html" class="hover:text-primary transition dark:text-white">About</a>
+                <a href="services.html" class="hover:text-primary transition dark:text-white">Services</a>
+                <a href="gallary.html" class="text-primary">Gallery</a>
+                <a href="cotact.html" class="hover:text-primary transition dark:text-white">Contact</a>
+
+                <!-- Fixed Toggle Button with ID -->
+                <button id="theme-toggle"
+                    class="p-2 rounded-full bg-white/50 dark:bg-white/10 hover:bg-primary/10 transition text-lg"
+                    aria-label="Toggle Dark Mode">🌓</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="pt-32 pb-16 px-6 text-center">
+
+        <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-4 italic">
+            Highland<span class="text-primary">Vault</span>
+        </h1>
+        <p class="text-xl font-medium text-slate-800 dark:text-slate-200">
+            A curated transmission of the biodiversity, landmarks, and serenity of Antique’s premier eco-tourism zone.
+            1,000 meters above the ordinary.
+        </p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-28">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[250px]">
+
+            <div
+                class="md:col-span-2 md:row-span-2 rounded-large-card overflow-hidden group relative border-4 border-white shadow-2xl">
+
+                <img src="../images/39 (1).webp"
+                    class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    alt="Strawberry Garden Entrance">
+                <div class="absolute bottom-8 left-8 z-20">
+                    <span
+                        class="bg-primary text-white px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">Signal
+                        Verified</span>
+                    <h3 class="text-3xl font-black mt-3 text-white italic tracking-tighter">Main Landmark</h3>
+                </div>
+            </div>
+
+            <div class="md:row-span-2 rounded-[2.5rem] overflow-hidden group relative border-4 border-white shadow-xl">
+                <img src="../images/maxresdefault.webp"
+                    class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    alt="Igbaclag Cave View">
+
+            </div>
+
+            <div class="rounded-[2.5rem] overflow-hidden group relative border-4 border-white shadow-xl">
+                <img src="../images/244424726_1858320614347593_1747931822874971348_n.webp"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"
+                    alt="Bamboo Rafting Danao Lake">
+            </div>
+
+            <div class="rounded-[2.5rem] overflow-hidden group relative border-4 border-white shadow-xl">
+                <img src="../images/DSC_3830.webp"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"
+                    alt="Blue Highland Cabin">
+            </div>
+
+            <div
+                class="md:col-span-3 rounded-large-card overflow-hidden group relative border-4 border-white shadow-2xl">
+                <img src="../images/wp-17528204370346755380726659582818.webp"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"
+                    alt="Aninglan Highland Field View">
+            </div>
+
+            <div
+                class="glass rounded-[3rem] p-8 border-4 border-white shadow-xl flex flex-col items-center justify-center text-center">
+                <p class="text-primary font-black text-3xl italic uppercase leading-none">Aningalans</p>
+                <p class="text-nature-500 text-[10px] mt-2 font-bold uppercase tracking-widest">tourist Attraction
+                </p>
+            </div>
+
+            <div
+                class="md:col-span-2 rounded-large-card overflow-hidden group relative border-4 border-white shadow-2xl">
+                <img src="../images/480855366_953968506820638_1005463848365130025_n.webp"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"
+                    alt="Sunset View Terrace">
+            </div>
+
+            <div class="rounded-[2.5rem] overflow-hidden group relative border-4 border-white shadow-xl">
+                <img src="../images/480030472_946231667594322_455494964066090225_n.webp"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"
+                    alt="Cave Pool Interior">
+            </div>
+
+            <div class="rounded-[2.5rem] overflow-hidden group relative border-4 border-white shadow-xl">
+                <img src="../images/480022426_946635697553919_7981695770408870278_n.webp"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"
+                    alt="Strawberry Close Up">
+            </div>
+
+            <div
+                class="md:col-span-2 rounded-large-card overflow-hidden group relative border-4 border-white shadow-2xl">
+                <img src="../images/480243762_946231554261000_9090135231389005170_n.webp"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"
+                    alt="Winding Highland Road">
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+                <div class="md:col-span-2">
+                    <a href="#" class="inline-block text-3xl font-black text-white tracking-tighter mb-4 uppercase">
+                        Aninglan<span class="text-primary">.</span>
+                    </a>
+                    <p class="text-sm text-slate-500 leading-relaxed max-w-sm mb-6">
+                        Experience the ultimate retreat. Escape the noise, establish a connection with nature, and
+                        elevate your perspective in the Summer Capital of Antique.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Nav Parameters</h4>
+                    <ul class="space-y-3 text-sm font-medium">
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Home</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">About</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Services</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Comm Link</h4>
+                    <ul class="space-y-3 text-sm font-medium mb-6">
+                        <li><a href="#contact" class="hover:text-primary transition-colors duration-300">Initiate
+                                Contact</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Support Signal</a>
+                        </li>
+                    </ul>
+
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <p>&copy; 2026 Aningalan Web Page. All signals reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

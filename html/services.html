@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aningalan Highlands Gallery | Eco-Tourism Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Combined Tailwind Configuration
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#b91c1c',
+                        secondary: '#991b1b',
+                        nature: {
+                            50: '#f1f8f1',
+                            100: '#e0f0e1',
+                            500: '#4a904d',
+                            800: '#1b4d1d',
+                        }
+                    },
+                    borderRadius: {
+                        'large-card': '3.5rem',
+                    },
+                }
+            }
+        }
+
+        // Inline script to prevent theme "flash" (runs immediately)
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Wait for DOM to load before attaching event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('dark');
+
+                    if (document.documentElement.classList.contains('dark')) {
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+        });
+    </script>
+    <style>
+        /* ... existing styles ... */
+        .dark .bg-page {
+            background-color: #0a0505;
+            background-blend-mode: multiply;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1542332213-31f87348057f?q=80&w=1000&auto=format&fit=crop');
+        }
+    </style>
+</head>
+
+<body class="bg-page min-h-screen font-sans text-slate-900 dark:text-slate-100">
+
+    <nav class="glass sticky top-0 z-50 transition-all border-b border-primary/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black tracking-tighter text-primary">ANINGALAN ⁂</a>
+            <div class="hidden md:flex items-center space-x-8 font-bold text-xs uppercase tracking-widest">
+                <!-- Navigation Links -->
+                <a href="home.html" class="hover:text-primary transition dark:text-white">Home</a>
+                <a href="about.html" class="hover:text-primary transition dark:text-white">About</a>
+                <a href="services.html" class="text-primary">Services</a>
+                <a href="gallary.html" class="hover:text-primary transition dark:text-white">Gallery</a>
+                <a href="cotact.html" class="hover:text-primary transition dark:text-white">Contact</a>
+
+                <!-- Fixed Toggle Button with ID -->
+                <button id="theme-toggle"
+                    class="p-2 rounded-full bg-white/50 dark:bg-white/10 hover:bg-primary/10 transition text-lg"
+                    aria-label="Toggle Dark Mode">🌓</button>
+            </div>
+        </div>
+    </nav>
+    <header class="pt-32 pb-12 px-6 text-center">
+
+        <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-4 italic">
+            Our <span class="text-primary">Services.</span>
+        </h1>
+        <p class="text-slate-600 font-medium">Powering your highland adventure through integrated local services.</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <div
+                class="glass p-8 rounded-[3rem] shadow-xl border border-white/40 group hover:scale-[1.02] transition-transform duration-500">
+                <div
+                    class="w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center font-bold mb-6 shadow-lg shadow-primary/20">
+                    E.G</div>
+                <h3 class="text-2xl font-black mb-3 tracking-tight">Expedition Guides</h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-6">Expert-led navigation through Igbaclag Cave and
+                    the Rafflesia sanctuaries of San Remigio.</p>
+                <ul class="text-xs font-bold space-y-2 uppercase tracking-wider text-slate-400">
+                    <li class="flex items-center gap-2"><span class="text-primary">✔</span> Cave Exploration</li>
+                    <li class="flex items-center gap-2"><span class="text-primary">✔</span> Flora Identification</li>
+                </ul>
+            </div>
+
+            <div
+                class="glass p-8 rounded-[3rem] shadow-xl border border-white/40 md:col-span-1 group hover:scale-[1.02] transition-transform duration-500">
+                <div
+                    class="w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center font-bold mb-6 shadow-lg shadow-primary/20">
+                    H.S</div>
+                <h3 class="text-2xl font-black mb-3 tracking-tight">Highland Stays</h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-6">Curated booking systems for mountain-view cabins
+                    and eco-lodges near the Strawberry Garden.</p>
+                <ul class="text-xs font-bold space-y-2 uppercase tracking-wider text-slate-400">
+                    <li class="flex items-center gap-2"><span class="text-primary">✔</span> Cloud-view Suites</li>
+                    <li class="flex items-center gap-2"><span class="text-primary">✔</span> 24/7 Signal Support</li>
+                </ul>
+            </div>
+
+            <div
+                class="glass p-8 rounded-[3rem] shadow-xl border border-white/40 group hover:scale-[1.02] transition-transform duration-500">
+                <div
+                    class="w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center font-bold mb-6 shadow-lg shadow-primary/20">
+                    E.L</div>
+                <h3 class="text-2xl font-black mb-3 tracking-tight">Event Logistics</h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-6">Enterprise-grade planning for weddings, mountain
+                    retreats, and team-building summits.</p>
+                <ul class="text-xs font-bold space-y-2 uppercase tracking-wider text-slate-400">
+                    <li class="flex items-center gap-2"><span class="text-primary">✔</span> Summit Catering</li>
+                    <li class="flex items-center gap-2"><span class="text-primary">✔</span> Terrain Logistics</li>
+                </ul>
+            </div>
+
+            <div
+                class="md:col-span-2 glass rounded-[3rem] overflow-hidden relative group h-[300px] border border-white/40 shadow-2xl">
+                <img src="../images/480855366_953968506820638_1005463848365130025_n.webp"
+                    class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                    alt="Sunset Service">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-10">
+                    <h3 class="text-white text-3xl font-black italic italic">VIP Sunset Sessions</h3>
+                    <p class="text-white/80 text-sm font-medium">Premium terrace access with local coffee pairing.</p>
+                </div>
+            </div>
+
+            <div
+                class="glass p-8 rounded-[3rem] shadow-xl border border-white/40 flex flex-col justify-center items-center text-center group hover:bg-primary transition-all duration-500">
+                <div
+                    class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition">
+                    <span class="text-primary text-2xl">🚕</span>
+                </div>
+                <h3 class="text-xl font-black group-hover:text-white transition"> Known as the "Little Baguio of
+                    Antique,"</h3>
+                <p class="text-slate-500 text-xs mt-6 group-hover:text-white/70 transition"> Aningalan is a misty
+                    highland sanctuary sitting 1,000 meters above the tropical heat.</p>
+            </div>
+
+        </div>
+
+        <section class="mt-20 glass p-12 rounded-[4rem] text-center border border-white/40 shadow-2xl">
+            <h2 class="text-4xl font-black tracking-tighter mb-6 italic">Ready to Initiate <span
+                    class="text-primary">Contact?</span></h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <center>
+                    <a href="#contact"
+                        class="inline-block bg-primary text-white px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-sm hover:shadow-2xl hover:shadow-primary/40 transition active:scale-95 text-center">
+                        Start Booking
+                    </a>
+                </center>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 relative overflow-hidden">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 blur-[120px] rounded-full -z-10">
+            </div>
+
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="glass p-8 md:p-12 rounded-[4rem] shadow-2xl border border-primary/20">
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+
+                        <div class="flex flex-col justify-center">
+                            <h2 class="text-4xl font-black mb-6 tracking-tighter">Transmission</h2>
+                            <p class="text-slate-500 mb-8 font-medium">Complete the signal parameters to initiate
+                                contact.</p>
+
+                            <ul class="space-y-4">
+                                <li id="step-name"
+                                    class="flex items-center gap-3 text-slate-400 transition-all duration-300">
+                                    <div
+                                        class="check-box w-6 h-6 border-2 border-slate-300 rounded-lg flex items-center justify-center transition-all">
+                                        <span class="hidden text-primary text-xs">✔</span>
+                                    </div>
+                                    <span class="font-bold uppercase tracking-widest text-sm">Identity Verified</span>
+                                </li>
+                                <li id="step-email"
+                                    class="flex items-center gap-3 text-slate-400 transition-all duration-300">
+                                    <div
+                                        class="check-box w-6 h-6 border-2 border-slate-300 rounded-lg flex items-center justify-center transition-all">
+                                        <span class="hidden text-primary text-xs">✔</span>
+                                    </div>
+                                    <span class="font-bold uppercase tracking-widest text-sm">Email Verified</span>
+                                </li>
+                                <li id="step-details"
+                                    class="flex items-center gap-3 text-slate-400 transition-all duration-300">
+                                    <div
+                                        class="check-box w-6 h-6 border-2 border-slate-300 rounded-lg flex items-center justify-center transition-all">
+                                        <span class="hidden text-primary text-xs">✔</span>
+                                    </div>
+                                    <span class="font-bold uppercase tracking-widest text-sm">No. of Days & Notes</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <form id="transmissionForm" class="space-y-4">
+                            <div
+                                class="bg-white/30 p-1.5 rounded-2xl flex mb-6 border border-primary/10 backdrop-blur-sm">
+                                <button type="button" id="tab-inquiry" onclick="switchTab('inquiry')"
+                                    class="flex-1 py-2.5 rounded-xl font-bold text-sm transition-all bg-primary text-white shadow-lg">Inquiry</button>
+                                <button type="button" id="tab-hotel" onclick="switchTab('hotel')"
+                                    class="flex-1 py-2.5 rounded-xl font-bold text-sm transition-all text-slate-500 hover:text-primary">Book
+                                    Hotel</button>
+                            </div>
+
+                            <input type="text" id="name" placeholder="Full Name" required
+                                class="w-full p-4 rounded-2xl bg-white/50 border-2 border-transparent focus:border-primary/40 outline-none transition-all">
+                            <input type="email" id="email" placeholder="Email Address" required
+                                class="w-full p-4 rounded-2xl bg-white/50 border-2 border-transparent focus:border-primary/40 outline-none transition-all">
+
+                            <div id="dynamic-fields">
+                                <textarea id="message" placeholder="Ex. book for 1 day.." rows="3" required
+                                    class="w-full p-4 rounded-2xl bg-white/50 border-2 border-transparent focus:border-primary/40 outline-none transition-all"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-primary text-white font-black py-5 rounded-2xl text-lg hover:shadow-2xl hover:shadow-primary/40 transition-all active:scale-95">
+                                Submit Signal
+                            </button>
+                        </form>
+
+                        <div class="h-full">
+                            <div class="flex items-center gap-3 text-primary mb-4">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <span class="text-xs">📍</span>
+                                </div>
+                                <span class="font-bold uppercase tracking-widest text-[10px]">Location Signal
+                                    Locked</span>
+                            </div>
+
+                            <div
+                                class="rounded-[2.5rem] overflow-hidden border-2 border-primary/20 shadow-2xl h-[400px] w-full">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.882410363297!2d122.06201666977539!3d11.18956900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33af80108872224d%3A0x673f8e5e8e8e8e8e!2sAningalan%2C%20San%20Remigio%2C%20Antique!5e0!3m2!1sen!2sph!4v1714270000000!5m2!1sen!2sph"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="successModal" class="fixed inset-0 z-[100] flex items-center justify-center hidden p-4">
+
+                <div class="absolute inset-0 bg-black/60 backdrop-blur-md" onclick="closeModal()"></div>
+
+
+                <div id="modalContent"
+                    class="relative bg-white p-12 rounded-[3rem] shadow-2xl max-w-sm w-full text-center scale-90 opacity-0 transition-all duration-500">
+                    <div
+                        class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center text-4xl mx-auto mb-6 shadow-xl shadow-primary/30 animate-bounce">
+                        ✔
+                    </div>
+                    <h3 class="text-3xl font-black mb-2 tracking-tighter text-slate-900 uppercase">Success!</h3>
+                    <p id="modalMessage" class="text-slate-500 font-medium mb-8">
+                        Your inquiry transmission was successful.
+                    </p>
+                    <button onclick="closeModal()"
+                        class="w-full bg-primary text-white font-black py-4 rounded-2xl hover:scale-105 transition-all uppercase tracking-widest text-xs">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const form = document.getElementById('transmissionForm');
+            let currentTab = 'inquiry';
+
+            function switchTab(type) {
+                currentTab = type;
+                const iBtn = document.getElementById('tab-inquiry');
+                const hBtn = document.getElementById('tab-hotel');
+                const dFields = document.getElementById('dynamic-fields');
+
+                if (type === 'hotel') {
+                    hBtn.className = "flex-1 py-2.5 rounded-xl font-bold text-sm transition-all bg-primary text-white shadow-lg";
+                    iBtn.className = "flex-1 py-2.5 rounded-xl font-bold text-sm transition-all text-slate-500 hover:text-primary";
+                    dFields.innerHTML = `
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="date" id="checkin" required class="w-full p-4 rounded-2xl bg-white/50 border-2 border-transparent focus:border-primary/40 outline-none transition-all">
+                    <input type="number" id="guests" placeholder="Guests" min="1" required class="w-full p-4 rounded-2xl bg-white/50 border-2 border-transparent focus:border-primary/40 outline-none transition-all">
+                </div>`;
+                } else {
+                    iBtn.className = "flex-1 py-2.5 rounded-xl font-bold text-sm transition-all bg-primary text-white shadow-lg";
+                    hBtn.className = "flex-1 py-2.5 rounded-xl font-bold text-sm transition-all text-slate-500 hover:text-primary";
+                    dFields.innerHTML = `<textarea id="message" placeholder="Ex. book for 1 day.." rows="3" required class="w-full p-4 rounded-2xl bg-white/50 border-2 border-transparent focus:border-primary/40 outline-none transition-all"></textarea>`;
+                }
+            }
+
+            function validateChecklist() {
+                const nameVal = document.getElementById('name').value;
+                const emailVal = document.getElementById('email').value;
+                let detailsReady = false;
+
+                if (currentTab === 'inquiry') {
+                    const msg = document.getElementById('message');
+                    detailsReady = msg && msg.value.length > 1;
+                } else {
+                    const cin = document.getElementById('checkin');
+                    const gst = document.getElementById('guests');
+                    detailsReady = cin && cin.value !== "" && gst && gst.value > 0;
+                }
+
+                updateUI('step-name', nameVal.length > 1);
+                updateUI('step-email', emailVal.includes('@'));
+                updateUI('step-details', detailsReady);
+            }
+            document.getElementById('transmissionForm').onsubmit = function (e) {
+                e.preventDefault();
+                const modal = document.getElementById('successModal');
+                const content = document.getElementById('modalContent');
+
+                // Show modal
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    content.classList.remove('scale-90', 'opacity-0');
+                    content.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            };
+
+            function closeModal() {
+                const modal = document.getElementById('successModal');
+                modal.classList.add('hidden');
+            }
+
+            function updateUI(id, isDone) {
+                const el = document.getElementById(id);
+                if (!el) return;
+                const check = el.querySelector('span');
+                const box = el.querySelector('.check-box');
+
+                if (isDone) {
+                    el.classList.replace('text-slate-400', 'text-primary');
+                    check.classList.remove('hidden');
+                    box.classList.add('border-primary');
+                } else {
+                    el.classList.replace('text-primary', 'text-slate-400');
+                    check.classList.add('hidden');
+                    box.classList.remove('border-primary');
+                }
+            }
+
+            function showModal() {
+                const modal = document.getElementById('successModal');
+                const content = document.getElementById('modalContent');
+                const msg = document.getElementById('modalMessage');
+
+                msg.innerText = currentTab === 'hotel'
+                    ? "Your hotel booking signal has been received!"
+                    : "Your inquiry transmission was successful.";
+
+                modal.classList.remove('hidden');
+
+                // Smooth entry animation
+                setTimeout(() => {
+                    content.classList.remove('scale-90', 'opacity-0');
+                    content.classList.add('scale-100', 'opacity-100');
+                }, 50);
+            }
+
+            function closeModal() {
+                const modal = document.getElementById('successModal');
+                const content = document.getElementById('modalContent');
+                content.classList.replace('scale-50', 'scale-90');
+                content.classList.replace('opacity-50', 'opacity-0');
+                setTimeout(() => modal.classList.add('hidden'), 300);
+            }
+
+            form.addEventListener('input', validateChecklist);
+            form.onsubmit = (e) => {
+                e.preventDefault();
+
+                // 1. Show the success modal (your existing logic)
+                showModal();
+
+                // 2. Reveal the Google Map
+                const mapContainer = document.getElementById('map-success-container');
+                if (mapContainer) {
+                    mapContainer.classList.remove('hidden');
+                    // Smooth scroll to the map so the user sees it
+                    setTimeout(() => {
+                        mapContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 500);
+                }
+
+                // 3. Reset form and UI
+                form.reset();
+                switchTab('inquiry');
+                validateChecklist();
+            };
+        </script>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+                <div class="md:col-span-2">
+                    <a href="#" class="inline-block text-3xl font-black text-white tracking-tighter mb-4 uppercase">
+                        Aninglan<span class="text-primary">.</span>
+                    </a>
+                    <p class="text-sm text-slate-500 leading-relaxed max-w-sm mb-6">
+                        Experience the ultimate retreat. Escape the noise, establish a connection with nature, and
+                        elevate your perspective in the Summer Capital of Antique.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Nav Parameters</h4>
+                    <ul class="space-y-3 text-sm font-medium">
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Home</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">About</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Services</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Comm Link</h4>
+                    <ul class="space-y-3 text-sm font-medium mb-6">
+                        <li><a href="#contact" class="hover:text-primary transition-colors duration-300">Initiate
+                                Contact</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Support Signal</a>
+                        </li>
+                    </ul>
+
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <p>&copy; 2026 Aningalan Web Page. All signals reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+</html>

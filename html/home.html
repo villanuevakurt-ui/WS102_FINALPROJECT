@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aninglan Web | Red Edition 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626',
+                        secondary: '#991b1b',
+                        accent: '#fee2e2',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Modern Glassmorphism with slight red tint */
+        .glass {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(14px) saturate(160%);
+            border: 1px solid rgba(220, 38, 38, 0.1);
+        }
+
+        .dark .glass {
+            background: rgba(15, 5, 5, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Full Background Image Configuration */
+        .full-bg-image {
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.7)),
+                url('../images/wp-17528204370346755380726659582818.webp');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .dark .full-bg-image {
+            background-image: linear-gradient(to bottom, rgba(10, 0, 0, 0.94), rgba(20, 0, 0, 0.85)),
+                url('../images/wp-17528204370346755380726659582818.webp');
+        }
+
+        /* Custom Scrollbar for 2026 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #dc2626;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="full-bg-image text-slate-900 dark:text-slate-100 transition-colors duration-300 font-sans antialiased">
+
+    <nav class="glass sticky top-0 z-50 transition-all border-b border-primary/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black tracking-tighter text-primary">ANINGALAN ⁂</a>
+            <div class="hidden md:flex items-center space-x-8 font-bold text-xs uppercase tracking-widest">
+                <a href="home.html" class="text-primary">Home</a>
+                <a href="about.html" class="hover:text-primary transition">About</a>
+                <a href="services.html" class="hover:text-primary transition">Services</a>
+                <a href="gallary.html" class="hover:text-primary transition">Gallery</a>
+                <a href="cotact.html" class="hover:text-primary transition">Contact</a>
+                <button onclick="document.documentElement.classList.toggle('dark')"
+                    class="p-2 rounded-full bg-white/50 dark:bg-white/10 hover:bg-primary/10 transition">🌓</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-6 py-24 md:py-32 flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 text-left z-10">
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-[0.9]">
+                Aninglan <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Web
+                    page.</span>
+            </h1>
+            <p
+                class="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-md bg-white/20 dark:bg-transparent backdrop-blur-sm p-2 rounded-lg">
+                Together We Rise, Aningalan.
+            </p>
+            <div class="flex gap-4">
+                <button onclick="document.getElementById('services').scrollIntoView()"
+                    class="bg-primary text-white font-black py-4 px-10 rounded-2xl shadow-xl shadow-primary/20 hover:scale-105 transition active:scale-95">ATTRACTIONS</button>
+                <button onclick="document.getElementById('gallery').scrollIntoView()"
+                    class="glass font-bold py-4 px-10 rounded-2xl hover:bg-white transition">Highlightss</button>
+            </div>
+        </div>
+        <div class="relative md:w-1/2 flex items-center justify-center p-10">
+            <div class="absolute inset-0 bg-red-600/30 rounded-full blur-[90px] animate-pulse transform scale-90"></div>
+
+            <div class="relative w-full aspect-[4/3] max-w-4xl">
+                <img src="https://images.unsplash.com/photo-1542332213-31f87348057f?q=80&w=1000&auto=format&fit=crop"
+                    alt="Enhanced Terraced Mountain Landscape"
+                    class="w-full h-full object-cover rounded-[3rem] shadow-2xl border-[6px] border-white/40">
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black tracking-tight">3 BEST TOURIST <span
+                        class="text-primary">ATTRACTION.</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div
+                    class="group relative overflow-hidden rounded-[2.5rem] shadow-xl aspect-[4/5] md:aspect-auto p-10 flex flex-col justify-end min-h-[400px]">
+                    <img src="../images/480793537_953968470153975_5729746747378068855_n.webp" alt="Python Background"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-500 group-hover:opacity-0">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-red-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-bold mb-4 text-white">Strawberry Garden</h3>
+                        <p class="text-gray-200 group-hover:text-white transition-colors">
+                            Advanced automation and AI-driven recipe logic for Chef Snap.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative overflow-hidden rounded-[2.5rem] shadow-xl aspect-[4/5] md:aspect-auto p-10 flex flex-col justify-end min-h-[400px]">
+                    <img src="../images/maxresdefault.webp" alt="Java Background"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-500 group-hover:opacity-0">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-red-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-bold mb-4 text-white">Igbaclag Cave</h3>
+                        <p class="text-gray-200 group-hover:text-white transition-colors">
+                            Enterprise-grade backend solutions for collaborative learning.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative overflow-hidden rounded-[2.5rem] shadow-xl aspect-[4/5] md:aspect-auto p-10 flex flex-col justify-end min-h-[400px]">
+                    <img src="../images/DSC_3830.webp" alt="C# Background"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-500 group-hover:opacity-0">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-red-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-bold mb-4 text-white">Lake Danao</h3>
+                        <p class="text-gray-200 group-hover:text-white transition-colors">
+                            Building modern desktop tools and secure social wallet systems.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl font-black mb-12 uppercase tracking-widest text-center">Highlights</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[250px]">
+
+                <div
+                    class="md:col-span-2 md:row-span-2 rounded-[3rem] overflow-hidden group relative border border-primary/20 shadow-2xl">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500 z-10">
+                    </div>
+                    <img src="../images/480022426_946635697553919_7981695770408870278_n.webp"
+                        alt="Highland Strawberry Garden"
+                        class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute bottom-8 left-8 z-20">
+                        <span
+                            class="bg-primary text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg">
+                            Main Landmark
+                        </span>
+                    </div>
+                </div>
+
+                <div class="rounded-[2.5rem] overflow-hidden border border-primary/10 group shadow-lg">
+                    <img src="../images/480030472_946231667594322_455494964066090225_n.webp"
+                        class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+
+                <div class="rounded-[2.5rem] overflow-hidden border border-primary/10 group shadow-lg">
+                    <img src="../images/480855366_953968506820638_1005463848365130025_n.webp"
+                        class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+
+                <div
+                    class="md:col-span-2 rounded-[3rem] overflow-hidden relative group border border-primary/10 shadow-xl">
+                    <img src="../images/480642393_949143937303095_6750824240463722241_n.webp"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                        <p class="text-white font-bold italic tracking-wide">Aningalan Highland View</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   
+
+    <script>
+        const form = document.getElementById('transmissionForm');
+        let currentTab = 'inquiry';
+
+        function switchTab(type) {
+            currentTab = type;
+            const iBtn = document.getElementById('tab-inquiry');
+            const hBtn = document.getElementById('tab-hotel');
+            const dFields = document.getElementById('dynamic-fields');
+
+            if (type === 'hotel') {
+                hBtn.className = "flex-1 py-2.5 rounded-xl font-bold text-sm transition-all bg-primary text-white shadow-lg";
+                iBtn.className = "flex-1 py-2.5 rounded-xl font-bold text-sm transition-all text-slate-500 hover:text-primary";
+                dFields.innerHTML = `
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="date" id="checkin" required class="w-full p-4 rounded-2xl bg-white/50 border-2 border-transparent focus:border-primary/40 outline-none transition-all">
+                    <input type="number" id="guests" placeholder="Guests" min="1" required class="w-full p-4 rounded-2xl bg-white/50 border-2 border-transparent focus:border-primary/40 outline-none transition-all">
+                </div>`;
+            } else {
+                iBtn.className = "flex-1 py-2.5 rounded-xl font-bold text-sm transition-all bg-primary text-white shadow-lg";
+                hBtn.className = "flex-1 py-2.5 rounded-xl font-bold text-sm transition-all text-slate-500 hover:text-primary";
+                dFields.innerHTML = `<textarea id="message" placeholder="Ex. book for 1 day.." rows="3" required class="w-full p-4 rounded-2xl bg-white/50 border-2 border-transparent focus:border-primary/40 outline-none transition-all"></textarea>`;
+            }
+        }
+
+        function validateChecklist() {
+            const nameVal = document.getElementById('name').value;
+            const emailVal = document.getElementById('email').value;
+            let detailsReady = false;
+
+            if (currentTab === 'inquiry') {
+                const msg = document.getElementById('message');
+                detailsReady = msg && msg.value.length > 1;
+            } else {
+                const cin = document.getElementById('checkin');
+                const gst = document.getElementById('guests');
+                detailsReady = cin && cin.value !== "" && gst && gst.value > 0;
+            }
+
+            updateUI('step-name', nameVal.length > 1);
+            updateUI('step-email', emailVal.includes('@'));
+            updateUI('step-details', detailsReady);
+        }
+
+        function updateUI(id, isDone) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const check = el.querySelector('span');
+            const box = el.querySelector('.check-box');
+
+            if (isDone) {
+                el.classList.replace('text-slate-400', 'text-primary');
+                check.classList.remove('hidden');
+                box.classList.add('border-primary');
+            } else {
+                el.classList.replace('text-primary', 'text-slate-400');
+                check.classList.add('hidden');
+                box.classList.remove('border-primary');
+            }
+        }
+
+        function showModal() {
+            const modal = document.getElementById('successModal');
+            const content = document.getElementById('modalContent');
+            const msg = document.getElementById('modalMessage');
+
+            msg.innerText = currentTab === 'hotel' ? "Your hotel booking signal has been received!" : "Your inquiry transmission was successful.";
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                content.classList.remove('scale-20', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            const content = document.getElementById('modalContent');
+            content.classList.replace('scale-50', 'scale-90');
+            content.classList.replace('opacity-50', 'opacity-0');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+
+        form.addEventListener('input', validateChecklist);
+        form.onsubmit = (e) => {
+            e.preventDefault();
+            showModal();
+            form.reset();
+            switchTab('inquiry');
+            validateChecklist();
+        };
+    </script>
+
+    <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+                <div class="md:col-span-2">
+                    <a href="#" class="inline-block text-3xl font-black text-white tracking-tighter mb-4 uppercase">
+                        Aninglan<span class="text-primary">.</span>
+                    </a>
+                    <p class="text-sm text-slate-500 leading-relaxed max-w-sm mb-6">
+                        Experience the ultimate retreat. Escape the noise, establish a connection with nature, and
+                        elevate your perspective in the Summer Capital of Antique.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Nav Parameters</h4>
+                    <ul class="space-y-3 text-sm font-medium">
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Home</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">About</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Services</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Comm Link</h4>
+                    <ul class="space-y-3 text-sm font-medium mb-6">
+                        <li><a href="#contact" class="hover:text-primary transition-colors duration-300">Initiate
+                                Contact</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors duration-300">Support Signal</a>
+                        </li>
+                    </ul>
+
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <p>&copy; 2026 Aningalan Web Page. All signals reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
